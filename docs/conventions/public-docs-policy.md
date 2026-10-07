@@ -1,3 +1,7 @@
+---
+description: "O que pode e o que não pode ser publicado neste site, e o hábito de verificação antes de cada commit."
+---
+
 # Política de documentação pública
 
 ## Modelo

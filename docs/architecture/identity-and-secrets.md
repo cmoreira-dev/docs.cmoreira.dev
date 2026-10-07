@@ -1,3 +1,7 @@
+---
+description: "CI com identidade federada e segredos injetados em runtime: nenhuma credencial de longa duração copiada à mão."
+---
+
 # Identidade e segredos
 
 Objetivo: **nenhuma credencial de longa duração copiada à mão**.

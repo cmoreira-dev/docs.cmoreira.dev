@@ -1,3 +1,7 @@
+---
+description: "Caso abstrato: um produto de visão computacional com nó de GPU e gateway de LLM."
+---
+
 # Caso: produto de visão computacional
 
 Um produto que analisa movimento em vídeo: o usuário envia um vídeo e recebe feedback gerado por um modelo de

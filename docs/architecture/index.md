@@ -1,3 +1,7 @@
+---
+description: "As quatro camadas da plataforma (provisionamento, cluster, entrega, aplicações) e como se relacionam."
+---
+
 # Visão geral da arquitetura
 
 A plataforma tem quatro camadas, cada uma com uma ferramenta e um dono claros.

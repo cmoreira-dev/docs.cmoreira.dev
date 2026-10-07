@@ -35,5 +35,5 @@ list.** The `public-guard` workflow enforces part of this; it is a backstop, not
 - Every page has a PT-BR file (`x.md`) and an EN twin (`x.en.md`) with the same structure. New page: add it to
   `nav:` and its title to `plugins.i18n.languages[en].nav_translations` in `mkdocs.yml`.
 - Validate: `./venv/bin/mkdocs build --strict`.
-- Design: the RapportHub design system lives in `docs/assets/css/rh-tokens.css` + `rh-components.css` (copied verbatim from the system; replace both when it changes) and `rh-material.css` (maps them onto MkDocs Material). Rules: header stays light (never `encontro`), no shadows, `acao` for links, coral only as brand marker. Change tokens
+- Design: light theme only, no color-scheme toggle (user decision). The RapportHub design system lives in `docs/assets/css/rh-tokens.css` + `rh-components.css` (copied verbatim from the system; replace both when it changes) and `rh-material.css` (maps them onto MkDocs Material). Rules: header stays light (never `encontro`), no shadows, `acao` for links, coral only as brand marker. Change tokens
   there, not per page.

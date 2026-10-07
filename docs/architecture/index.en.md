@@ -1,3 +1,7 @@
+---
+description: "The platform's four layers (provisioning, cluster, delivery, applications) and how they relate."
+---
+
 # Architecture overview
 
 The platform has four layers, each with one clear tool and owner.

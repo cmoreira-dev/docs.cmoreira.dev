@@ -1,3 +1,7 @@
+---
+description: "High-level notes on a homelab platform run with production practices: patterns, decisions and lessons."
+---
+
 # Homelab platform: how and why
 
 High-level notes on a personal platform run with production practices: real Kubernetes, infrastructure as
@@ -31,4 +35,4 @@ flowchart LR
 - **Everything declarative.** Git is the only source of desired state.
 - **No long-lived credentials.** Federated identity in CI and secrets injected at runtime.
 - **Convention over configuration.** A repository's name already says what it does.
-- **Docs next to the code.** Each repository documents itself; this site summarises what is worth sharing.
+- **Docs next to the code.** Each repository documents itself; this site summarizes what is worth sharing.

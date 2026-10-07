@@ -1,6 +1,6 @@
 site_name: Platform notes
 site_url: https://docs.cmoreira.dev/
-site_description: How and why a homelab platform was built — patterns, decisions and lessons learned.
+site_description: Platform notes - patterns, decisions and lessons learned.
 copyright: © 2025-2026 cmoreira.dev
 docs_dir: docs
 
@@ -11,16 +11,7 @@ theme:
   logo: assets/img/symbol.svg
   favicon: assets/img/favicon.ico
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      toggle:
-        icon: material/brightness-7
-        name: Dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Light mode
+    scheme: default
   features:
     - navigation.tabs
     - navigation.sticky_tabs

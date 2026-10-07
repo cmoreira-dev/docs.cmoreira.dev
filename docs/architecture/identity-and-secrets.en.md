@@ -1,3 +1,7 @@
+---
+description: "Federated-identity CI and secrets injected at runtime: no long-lived credential copied by hand."
+---
+
 # Identity and secrets
 
 Goal: **no long-lived credential copied by hand**.

@@ -1,3 +1,7 @@
+---
+description: "Como um git push vira workload: descoberta automática, uma Application por repositório e sync contínuo."
+---
+
 # Padrão GitOps
 
 Um `git push` na branch principal de um repositório `gitops.*` **é** o deploy. Não há `kubectl apply`

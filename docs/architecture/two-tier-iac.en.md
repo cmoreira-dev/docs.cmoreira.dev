@@ -1,3 +1,7 @@
+---
+description: "Two-tier IaC with disjoint boundaries: a gated-apply foundation and per-application resources reconciled in-cluster."
+---
+
 # Two-tier IaC
 
 Infrastructure as code is split into two tiers with **disjoint boundaries**.

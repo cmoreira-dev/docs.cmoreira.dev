@@ -1,3 +1,7 @@
+---
+description: "Caso abstrato: um app pessoal simples usado como exemplo público da plataforma."
+---
+
 # Caso: app pessoal (Sara)
 
 Um app pessoal de estudo musical, usado aqui como o exemplo público e simples da plataforma.

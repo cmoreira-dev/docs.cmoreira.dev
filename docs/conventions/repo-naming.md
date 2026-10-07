@@ -1,3 +1,7 @@
+---
+description: "Convenção de nomes: o prefixo do repositório diz o tipo e como ele é operado."
+---
+
 # Nomes de repositórios
 
 O prefixo diz o tipo do repositório e como ele é operado.

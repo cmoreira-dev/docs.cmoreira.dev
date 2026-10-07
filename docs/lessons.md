@@ -1,3 +1,7 @@
+---
+description: "O que quebrou ou surpreendeu ao operar a plataforma."
+---
+
 # Lições aprendidas
 
 - **Fronteiras de IaC têm de ser disjuntas.** Dois controladores no mesmo state se desfazem mutuamente.

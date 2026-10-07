@@ -1,3 +1,7 @@
+---
+description: "Naming convention: a repository's prefix says its type and how it is operated."
+---
+
 # Repository naming
 
 The prefix says the repository's type and how it is operated.

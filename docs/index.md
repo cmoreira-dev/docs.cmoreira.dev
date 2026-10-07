@@ -1,3 +1,7 @@
+---
+description: "Notas de alto nível sobre uma plataforma de homelab operada com práticas de produção: padrões, decisões e lições."
+---
+
 # Plataforma de homelab: como e porquê
 
 Notas de alto nível sobre uma plataforma pessoal operada com práticas de produção: Kubernetes real,

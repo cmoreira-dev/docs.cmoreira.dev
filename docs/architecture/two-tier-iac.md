@@ -1,3 +1,7 @@
+---
+description: "IaC em dois níveis com fronteiras disjuntas: fundação com apply aprovado e recursos por aplicação no cluster."
+---
+
 # IaC em dois níveis
 
 Infraestrutura como código é dividida em dois níveis com **fronteiras disjuntas**.

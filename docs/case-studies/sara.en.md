@@ -1,3 +1,7 @@
+---
+description: "Abstract case: a simple personal app used as the platform's public example."
+---
+
 # Case: personal app (Sara)
 
 A personal music-study app, used here as the simple, public example of the platform.

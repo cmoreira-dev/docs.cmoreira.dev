@@ -1,3 +1,7 @@
+---
+description: "What broke or surprised while operating the platform."
+---
+
 # Lessons learned
 
 - **IaC boundaries must be disjoint.** Two controllers on the same state undo each other.
@@ -7,4 +11,4 @@
   alone breaks the others. Group the updates and test the whole stack.
 - **Not every repository has PR CI.** Where builds only run on merge, validate locally before merging.
 - **Docs that live far from the code go stale.** Technical detail next to the repository; here only what is
-  worth generalising.
+  worth generalizing.

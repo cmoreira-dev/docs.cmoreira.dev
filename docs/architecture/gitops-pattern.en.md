@@ -1,3 +1,7 @@
+---
+description: "How a git push becomes a running workload: auto-discovery, one Application per repository and continuous sync."
+---
+
 # GitOps pattern
 
 A `git push` to the main branch of a `gitops.*` repository **is** the deploy. There is no manual `kubectl apply`
@@ -12,7 +16,7 @@ flowchart TB
 
 ## The three layers
 
-1. **Discovery.** An `ApplicationSet` queries the organisation and creates one Application per repository
+1. **Discovery.** An `ApplicationSet` queries the organization and creates one Application per repository
    matching the `gitops.` prefix. A new repository joins on its own, with no central edit.
 2. **Per repository.** Each repo declares what it ships. One workload per repo is the common case; more than
    one component needs explicit declarations.

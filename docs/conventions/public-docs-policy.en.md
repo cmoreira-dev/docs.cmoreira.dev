@@ -1,3 +1,7 @@
+---
+description: "What may and may not be published on this site, and the pre-commit check habit."
+---
+
 # Public documentation policy
 
 ## Model
