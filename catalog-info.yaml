@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: docs
+  description: 'Public platform notes (MkDocs, PT-BR + EN): patterns, decisions and lessons'
+  annotations:
+    github.com/project-slug: cmoreira-dev/docs.cmoreira.dev
+  links:
+    - url: https://docs.cmoreira.dev
+      title: Public docs site
+      icon: docs
+spec:
+  type: documentation
+  owner: platform-team
+  system: homelab-platform
+  lifecycle: production

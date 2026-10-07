@@ -1,0 +1,90 @@
+site_name: Platform notes
+site_url: https://docs.cmoreira.dev/
+site_description: How and why a homelab platform was built — patterns, decisions and lessons learned.
+copyright: © 2025-2026 cmoreira.dev
+docs_dir: docs
+
+theme:
+  name: material
+  custom_dir: overrides
+  font: false
+  logo: assets/img/symbol.svg
+  favicon: assets/img/favicon.ico
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Light mode
+  features:
+    - navigation.tabs
+    - navigation.sticky_tabs
+    - navigation.indexes
+    - toc.integrate
+    - content.code.copy
+
+extra_css:
+  - assets/css/rh-tokens.css
+  - assets/css/rh-components.css
+  - assets/css/rh-material.css
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: pt-BR
+          default: true
+          name: Português (BR)
+          build: true
+        - locale: en
+          name: English
+          build: true
+          nav_translations:
+            Home: Home
+            Arquitetura: Architecture
+            Visão geral: Overview
+            Padrão GitOps: GitOps pattern
+            Identidade e segredos: Identity and secrets
+            IaC em dois níveis: Two-tier IaC
+            Decisões: Decisions
+            Lições aprendidas: Lessons learned
+            Casos de estudo: Case studies
+            Produto de visão computacional: Computer-vision product
+            App pessoal (Sara): Personal app (Sara)
+            Convenções: Conventions
+            Nomes de repositórios: Repository naming
+            Política de documentação pública: Public documentation policy
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Home: index.md
+  - Arquitetura:
+      - Visão geral: architecture/index.md
+      - Padrão GitOps: architecture/gitops-pattern.md
+      - Identidade e segredos: architecture/identity-and-secrets.md
+      - IaC em dois níveis: architecture/two-tier-iac.md
+  - Decisões: decisions.md
+  - Lições aprendidas: lessons.md
+  - Casos de estudo:
+      - Produto de visão computacional: case-studies/computer-vision.md
+      - App pessoal (Sara): case-studies/sara.md
+  - Convenções:
+      - Nomes de repositórios: conventions/repo-naming.md
+      - Política de documentação pública: conventions/public-docs-policy.md

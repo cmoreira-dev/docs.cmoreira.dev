@@ -1,0 +1,30 @@
+name: Public docs guard
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Secret scan (gitleaks)
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Private identifier patterns
+        run: |
+          set -u
+          # Allowed: this policy file documents the patterns, and docs.cmoreira.dev itself.
+          pat='(\b([0-9]{1,3}\.){3}[0-9]{1,3}\b)|(\b[0-9]{12}\b)|(/homelab/)|(\.ia\.)|(\b(api|ui)\.[a-z-]+\.(com|dev|pt)\b)|(\.svc\.cluster\.local)|(AKIA[0-9A-Z]{16})'
+          if grep -rEn --include='*.md' --include='*.yml' --include='*.yaml' -e "$pat" docs mkdocs.yml | grep -v '0\.0\.0\.0'; then
+            echo "::error::Private identifier pattern found. Use placeholders (see conventions/public-docs-policy)."
+            exit 1
+          fi

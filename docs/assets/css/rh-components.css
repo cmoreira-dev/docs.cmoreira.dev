@@ -1,0 +1,77 @@
+/* rapport·hub — componentes em CSS puro (sem JavaScript).
+   Lê os tokens de tokens.css; os valores depois da vírgula são o tema claro, para funcionar sem tokens.css.
+   Prefixo rh- para não colidir com o CSS do produto que o adota. */
+
+.rh, .rh-pagina {
+  font-family: var(--font-texto, "Source Serif 4", Georgia, serif);
+  color: var(--texto, #1C2026);
+  background: var(--superficie, #FFFFFF);
+  font-size: 18px; line-height: 1.6;
+}
+.rh :focus-visible, .rh-pagina :focus-visible {
+  outline: 3px solid var(--foco, #5B7BD6); outline-offset: 3px; border-radius: var(--raio-foco, 4px);
+}
+.rh a:not([class]) { color: var(--acao, #2C4A9A); text-underline-offset: 0.18em; }
+.rh a:not([class]):hover { color: var(--texto, #1C2026); }
+
+/* Tipografia de apoio */
+.rh-eyebrow { margin: 0; font-family: var(--font-display, "Plus Jakarta Sans", system-ui, sans-serif); font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--texto-fraco, #565C68); }
+.rh-lead { margin: 0; font-size: 20px; line-height: 1.55; color: var(--texto-suave, #3A404B); max-width: 62ch; }
+.rh-titulo { margin: 0; font-family: var(--font-display, "Plus Jakarta Sans", system-ui, sans-serif); font-weight: 800; letter-spacing: -0.035em; line-height: 1.05; text-wrap: balance; }
+
+/* Marca: símbolo + rapport·hub */
+.rh-marca { display: inline-flex; align-items: center; gap: 0.45em; font-family: var(--font-display, "Plus Jakarta Sans", system-ui, sans-serif); font-weight: 800; letter-spacing: -0.04em; color: inherit; text-decoration: none; white-space: nowrap; line-height: 1; }
+.rh-marca svg { width: 1.6em; height: 1.6em; flex: none; }
+.rh-ponto { display: inline-block; width: 0.17em; height: 0.17em; border-radius: 50%; background: var(--coral, #EC6A50); margin: 0 0.06em; vertical-align: 0.18em; }
+.rh-simbolo .c { fill: var(--coral, #EC6A50); }
+.rh-simbolo .b { fill: var(--simbolo-cobalto, #2C4A9A); }
+.rh-simbolo .e { fill: var(--simbolo-encontro, #3E2346); }
+.rh-inverso .rh-simbolo .b { fill: var(--cobalto-claro, #5B7BD6); }
+.rh-inverso .rh-simbolo .e { fill: var(--bruma, #F2F3F6); }
+
+/* Botões */
+.rh-botao { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: var(--botao-altura-min, 48px); padding: 12px 24px; border-radius: var(--raio-pilula, 999px); border: 2px solid transparent; font-family: var(--font-display, "Plus Jakarta Sans", system-ui, sans-serif); font-size: 16px; font-weight: 700; line-height: 1.2; text-decoration: none; cursor: pointer; }
+.rh-botao--principal { background: var(--acao, #2C4A9A); color: var(--on-acao, #FFFFFF); }
+.rh-botao--principal:hover { background: var(--texto, #1C2026); color: var(--superficie, #FFFFFF); }
+.rh-botao--secundario { background: transparent; border-color: var(--texto, #1C2026); color: var(--texto, #1C2026); }
+.rh-botao--secundario:hover { background: var(--texto, #1C2026); color: var(--superficie, #FFFFFF); }
+.rh-botao--claro { background: var(--texto-inverso, #FFFFFF); color: var(--tinta, #1C2026); }
+.rh-botao--claro:hover { background: var(--coral, #EC6A50); color: var(--tinta, #1C2026); }
+.rh-botoes { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Etiqueta */
+.rh-etiqueta { display: inline-flex; align-items: center; align-self: flex-start; padding: 5px 12px; border-radius: var(--raio-pilula, 999px); background: var(--superficie-alt, #F2F3F6); color: var(--texto-suave, #3A404B); font-family: var(--font-display, "Plus Jakarta Sans", system-ui, sans-serif); font-size: 13px; font-weight: 700; letter-spacing: 0.04em; line-height: 1.3; }
+.rh-superficie-alt .rh-etiqueta, .rh-etiqueta--sobre-alt { background: var(--superficie, #FFFFFF); }
+
+/* Cartão */
+.rh-cartao { display: flex; flex-direction: column; gap: 12px; padding: 28px; border-radius: var(--raio-cartao, 20px); background: var(--superficie, #FFFFFF); border: 1px solid var(--linha, #DDE0E6); min-width: 0; }
+.rh-cartao h3 { margin: 0; font-family: var(--font-display, "Plus Jakarta Sans", system-ui, sans-serif); font-size: 22px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; color: var(--texto, #1C2026); }
+.rh-cartao p { margin: 0; font-size: 16px; line-height: 1.5; color: var(--texto-suave, #3A404B); }
+.rh-cartao--sem-borda { border-color: transparent; }
+.rh-cartao--alt { background: var(--superficie-alt, #F2F3F6); border-color: transparent; }
+.rh-marcador { width: 36px; height: 6px; border-radius: 3px; background: var(--coral, #EC6A50); }
+.rh-marcador--cobalto { background: var(--simbolo-cobalto, #2C4A9A); }
+.rh-marcador--encontro { background: var(--simbolo-encontro, #3E2346); }
+
+/* Cabeçalho */
+.rh-cabecalho { border-bottom: 1px solid var(--linha, #DDE0E6); background: var(--superficie, #FFFFFF); }
+.rh-cabecalho__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 28px; padding: 18px 20px; max-width: calc(var(--largura-conteudo, 1120px) + 80px); margin: 0 auto; }
+.rh-cabecalho .rh-marca { font-size: 21px; }
+.rh-nav { display: flex; flex-wrap: wrap; gap: 6px 26px; font-family: var(--font-display, "Plus Jakarta Sans", system-ui, sans-serif); font-size: 16px; font-weight: 600; }
+.rh-nav a { color: var(--texto, #1C2026); text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent; }
+.rh-nav a:hover { border-bottom-color: var(--linha, #DDE0E6); }
+.rh-nav a[aria-current="page"] { border-bottom-color: var(--coral, #EC6A50); }
+.rh-idiomas { display: flex; gap: 4px; font-family: var(--font-display, "Plus Jakarta Sans", system-ui, sans-serif); font-size: 13px; font-weight: 700; letter-spacing: 0.06em; }
+.rh-idiomas a { color: var(--texto-fraco, #565C68); text-decoration: none; padding: 6px 8px; border-radius: var(--raio-pilula, 999px); }
+.rh-idiomas a[aria-current="true"] { background: var(--texto, #1C2026); color: var(--superficie, #FFFFFF); }
+
+/* Faixa de convite e rodapé (sempre escuros) */
+.rh-inverso { background: var(--superficie-inversa, #1C2026); color: var(--texto-inverso, #FFFFFF); }
+.rh-convite { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px; padding: 56px 40px; }
+.rh-convite .rh-titulo { font-size: 36px; color: var(--texto-inverso, #FFFFFF); }
+.rh-convite p { margin: 8px 0 0; max-width: 56ch; font-size: 18px; color: var(--texto-inverso-suave, #C9CDD6); }
+.rh-rodape { padding: 40px; display: flex; flex-direction: column; gap: 24px; }
+.rh-rodape__linha { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 28px; }
+.rh-rodape__linha + .rh-rodape__linha { border-top: 1px solid #343A44; padding-top: 20px; font-family: var(--font-display, "Plus Jakarta Sans", system-ui, sans-serif); font-size: 14px; }
+.rh-rodape__linha > p, .rh-rodape__linha > a, .rh-rodape__linha > span { color: var(--texto-inverso-suave, #C9CDD6); font-size: 15px; margin: 0; }
+.rh-rodape .rh-marca { font-size: 22px; color: var(--texto-inverso, #FFFFFF); }
