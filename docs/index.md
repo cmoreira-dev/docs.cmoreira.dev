@@ -13,7 +13,7 @@ componente (configuração, endpoints, runbooks, roadmap) vivem junto do código
 ## Em uma imagem
 
 ```mermaid
-flowchart LR
+flowchart TB
     dev["Desenvolvedor"] -- "PR + merge" --> git["Repositórios Git"]
     git -- "CI: build da imagem" --> reg["Registry de imagens"]
     git -- "estado desejado" --> argo["Controlador GitOps"]

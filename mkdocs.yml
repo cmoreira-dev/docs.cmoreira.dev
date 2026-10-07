@@ -49,6 +49,11 @@ plugins:
             Produto de visão computacional: Computer-vision product
             App pessoal (Sara): Personal app (Sara)
             Convenções: Conventions
+            Cluster em sistema imutável: Immutable-OS cluster
+            Observabilidade: Observability
+            GPU no cluster: GPU in the cluster
+            Gateway de LLM: LLM gateway
+            Sobre: About
             Nomes de repositórios: Repository naming
             Política de documentação pública: Public documentation policy
 
@@ -71,6 +76,10 @@ nav:
       - Padrão GitOps: architecture/gitops-pattern.md
       - Identidade e segredos: architecture/identity-and-secrets.md
       - IaC em dois níveis: architecture/two-tier-iac.md
+      - Cluster em sistema imutável: architecture/immutable-cluster.md
+      - Observabilidade: architecture/observability.md
+      - GPU no cluster: architecture/gpu-workloads.md
+      - Gateway de LLM: architecture/llm-gateway.md
   - Decisões: decisions.md
   - Lições aprendidas: lessons.md
   - Casos de estudo:
@@ -79,3 +88,4 @@ nav:
   - Convenções:
       - Nomes de repositórios: conventions/repo-naming.md
       - Política de documentação pública: conventions/public-docs-policy.md
+  - Sobre: about.md
