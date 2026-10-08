@@ -9,7 +9,7 @@ theme:
   custom_dir: overrides
   font: false
   logo: assets/img/symbol.svg
-  favicon: assets/img/favicon.ico
+  favicon: assets/img/favicon.svg
   palette:
     scheme: default
   features:
@@ -18,6 +18,15 @@ theme:
     - navigation.indexes
     - toc.integrate
     - content.code.copy
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/cmoreira-dev
+      name: GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/cassiomoreira
+      name: LinkedIn
 
 extra_css:
   - assets/css/rh-tokens.css

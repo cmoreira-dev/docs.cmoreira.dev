@@ -71,3 +71,8 @@ body, .md-typeset { font-family: var(--font-texto); }
 .md-footer a { color: var(--texto-inverso); }
 .md-typeset .mermaid { text-align: center; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* search field: mist surface instead of Material's default grey */
+.md-search__input { background-color: var(--superficie-alt); color: var(--texto); border-radius: var(--raio-pilula); }
+.md-search__input::placeholder { color: var(--texto-fraco); }
+.md-search__icon svg { fill: var(--texto-fraco); }

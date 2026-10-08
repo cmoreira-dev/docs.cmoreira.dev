@@ -8,8 +8,10 @@ I'm **Cássio Moreira**, a platform engineer (DevOps and cloud). This homelab is
 rules as a production environment, what I usually apply at work: IaC, GitOps, federated identity and
 observability.
 
-The code for the reusable modules and the history of what I've built are on GitHub:
-[cmoreira-dev](https://github.com/cmoreira-dev).
+Where to find me:
+
+- [LinkedIn](https://www.linkedin.com/in/cassiomoreira)
+- [GitHub](https://github.com/cmoreira-dev): reusable modules and the history of what I've built
 
 The notes here are high-level on purpose: patterns, decisions and lessons. The operational detail of each
 component lives next to the code, in private repositories.

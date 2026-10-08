@@ -8,8 +8,10 @@ Sou **Cássio Moreira**, engenheiro de plataforma (DevOps e cloud). Este homelab
 regras de um ambiente de produção, o que costumo aplicar no trabalho: IaC, GitOps, identidade federada e
 observabilidade.
 
-O código dos módulos reutilizáveis e o histórico do que construí estão no GitHub:
-[cmoreira-dev](https://github.com/cmoreira-dev).
+Onde me encontrar:
+
+- [LinkedIn](https://www.linkedin.com/in/cassiomoreira)
+- [GitHub](https://github.com/cmoreira-dev): módulos reutilizáveis e o histórico do que construí
 
 As notas daqui são de alto nível de propósito: padrões, decisões e lições. O detalhe operacional de cada
 componente vive junto do código, em repositórios privados.
