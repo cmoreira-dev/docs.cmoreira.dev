@@ -16,3 +16,7 @@ Formato: contexto, escolha, custo aceito.
 | IaC | Fundação compartilhada e recursos que pertencem a cada app | Dois níveis com fronteiras disjuntas | Dois modos de operar Terraform |
 | Dependências | Muitos repositórios, atualizações constantes | Renovate org-wide; majors tratados como projeto | Major bumps nunca são automáticos |
 | Complexidade | Operador único: cada componente tem custo de manutenção | Remover o que não paga o custo | Menos funcionalidades "de catálogo" |
+| Onde vive a IaC | Cloud e cluster em repositórios separados, dois modelos de execução | Um repositório de fundação; `bootstrap/` manual e o resto automatizado | O executor da LAN é um ponto de falha para *mudar* a infra |
+| Módulos de IaC | Código misturado com valores do ambiente e sem versões | Um repositório por módulo, versionado por tag; as unidades só têm configuração | Mais repositórios para manter |
+| Quando aplicar | Um apply no cluster mexe em nós; um apply na cloud, não | O raio de impacto decide o portão: o seguro aplica-se após o merge, o resto por um passo humano com plano visível antes | Alguns changes precisam de dois cliques |
+| O que o CI executa | Rodar tudo a cada PR é lento e esconde o que mudou | Só as unidades alteradas, descobertas pelo ficheiro alterado | Um seletor próprio para manter |
