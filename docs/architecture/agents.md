@@ -46,6 +46,20 @@ Um controlador sem autenticação própria nunca é exposto sozinho. São três 
 
 Um pedido gera um trace único, do bot ao agente, à chamada de modelo e à ferramenta. Os eventos do bot são estruturados e **nunca** carregam o texto das mensagens. Um painel mostra volume, latência, falhas e a avaliação das respostas (reações das pessoas), e um conjunto fixo de perguntas serve de teste de regressão ao trocar modelo ou prompt.
 
+## Uma pergunta, passo a passo
+
+1. Alguém escreve no chat privado: "como está o cluster?"
+2. O bot confirma que quem escreveu está na lista de permitidos e que foi chamado, e entrega a pergunta ao orquestrador.
+3. O orquestrador escolhe o agente de cluster, que lê pods, eventos, métricas e logs por ferramentas só de leitura.
+4. O agente pede ao modelo hospedado que raciocine sobre essa evidência e devolve uma resposta curta no idioma de quem perguntou.
+5. O bot responde na sala; um polegar para cima ou para baixo fica guardado como feedback de qualidade.
+
+O mesmo fluxo corre agendado: todas as manhãs um workflow pede um resumo de saúde e publica na sala da família.
+
+## Porquê assim
+
+O objetivo nunca foi "um chatbot". Foi parar de colar paredes de logs num contexto caro, ter respostas onde as pessoas já estão (o telemóvel) e manter documentos pessoais em hardware em casa. Tudo o resto decorre destes três limites.
+
 ## Trade-offs
 
 - (+) Perguntas operacionais respondidas sem levar logs para o contexto do assistente principal.

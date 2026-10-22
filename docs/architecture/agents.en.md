@@ -46,6 +46,20 @@ A controller with no authentication of its own is never exposed alone. Three lay
 
 A request produces a single trace, from the bot through the agent to the model call and the tool. The bot's events are structured and **never** carry message text. A dashboard shows volume, latency, failures and answer ratings (people's reactions), and a fixed set of questions works as a regression test when changing a model or a prompt.
 
+## A question, step by step
+
+1. Someone writes in the private chat: "how is the cluster doing?"
+2. The bot checks the sender is on the allowlist and that it was addressed, then hands the question to the orchestrator.
+3. The orchestrator picks the cluster agent, which reads pods, events, metrics and logs through read-only tools.
+4. The agent asks the hosted model to reason over that evidence and returns a short answer in the sender's language.
+5. The bot replies in the room; a thumbs-up or thumbs-down is stored as quality feedback.
+
+The same flow runs on a schedule: every morning a workflow asks for a health summary and posts it to the family room.
+
+## Why build it this way
+
+The goal was never "a chatbot". It was to stop pasting walls of logs into an expensive context, to get answers where people already are (a phone), and to keep personal documents on hardware at home. Everything else follows from those three constraints.
+
 ## Trade-offs
 
 - (+) Operational questions answered without bringing logs into the main assistant's context.
