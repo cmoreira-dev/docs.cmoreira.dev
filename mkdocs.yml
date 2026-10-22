@@ -62,6 +62,7 @@ plugins:
             Observabilidade: Observability
             GPU no cluster: GPU in the cluster
             Gateway de LLM: LLM gateway
+            Agentes e chat: Agents and chat
             Sobre: About
             Nomes de repositórios: Repository naming
             Política de documentação pública: Public documentation policy
@@ -89,6 +90,7 @@ nav:
       - Observabilidade: architecture/observability.md
       - GPU no cluster: architecture/gpu-workloads.md
       - Gateway de LLM: architecture/llm-gateway.md
+      - Agentes e chat: architecture/agents.md
   - Decisões: decisions.md
   - Lições aprendidas: lessons.md
   - Casos de estudo:

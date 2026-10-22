@@ -26,3 +26,7 @@ description: "O que quebrou ou surpreendeu ao operar a plataforma."
   ao anterior.
 - **Placas pequenas: 64 bits.** Um runner de CI numa placa ARM de 32 bits falhou (TLS e runtime de Node). Reinstalar
   em 64 bits custou menos do que contornar.
+- **Modelo local pequeno não é um agente confiável.** Um modelo de 14B escreveu a chamada de ferramenta como texto, respondeu em outro idioma e resumiu o ruído em vez do estado. Agentes que chamam ferramentas vão para um modelo hospedado pequeno; o local fica para resumo, classificação e dados pessoais. Um conjunto fixo de perguntas pega a regressão.
+- **Telemetria de LLM vaza conteúdo por padrão.** Os spans do gateway levavam o texto da resposta de um modelo que devia ficar só em casa. Desligue o registro de mensagens e verifique com uma palavra marcadora no trace.
+- **Eventos que chegam antes do tratador existir se perdem.** Convites enviados antes de o bot subir não disparavam o callback. Trate o estado pendente na inicialização, não só os eventos novos.
+- **Expressões de template terminam no primeiro fecha-chaves duplo.** Um corpo JSON aninhado dentro de uma única expressão foi cortado no meio. Monte o corpo como texto e deixe só valores pequenos como expressões, e teste contra um servidor de eco.
