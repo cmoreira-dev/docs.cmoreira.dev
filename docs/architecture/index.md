@@ -29,4 +29,4 @@ disparados manualmente; do controlador GitOps em diante, tudo é reconciliado co
 divergência é revertida.
 
 Veja os padrões em detalhe: [GitOps](gitops-pattern.md), [identidade e segredos](identity-and-secrets.md),
-[IaC em dois níveis](two-tier-iac.md).
+[IaC em dois níveis](two-tier-iac.md), [agentes e chat](agents.md).

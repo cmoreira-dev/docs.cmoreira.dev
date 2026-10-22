@@ -28,4 +28,4 @@ flowchart TB
 manually; from the GitOps controller onwards everything is continuously reconciled and any drift is reverted.
 
 Patterns in detail: [GitOps](gitops-pattern.md), [identity and secrets](identity-and-secrets.md),
-[two-tier IaC](two-tier-iac.md).
+[two-tier IaC](two-tier-iac.md), [agents and chat](agents.md).

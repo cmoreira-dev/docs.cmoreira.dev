@@ -25,3 +25,7 @@ description: "What broke or surprised while operating the platform."
   identical to the previous one.
 - **Small boards: 64-bit.** A CI runner on a 32-bit ARM board failed (TLS and the Node runtime). Reinstalling in
   64-bit cost less than working around it.
+- **A small local model is not a reliable agent.** A 14B model wrote the tool call as text, answered in another language and summarized noise instead of state. Agents that call tools go to a small hosted model; the local one is kept for summaries, classification and personal data. A fixed question set catches the regression.
+- **LLM telemetry leaks content by default.** The gateway's spans carried the answer text of a model that was meant to stay at home. Turn message logging off and verify with a marker word in the trace.
+- **Events that arrive before the handler exists are lost.** Invitations sent before the bot was up never fired the callback. Handle pending state at startup, not just new events.
+- **Template expressions end at the first double closing brace.** A nested JSON body inside a single expression was cut in the middle. Build the body as text and keep only small values as expressions, and test against an echo server.
